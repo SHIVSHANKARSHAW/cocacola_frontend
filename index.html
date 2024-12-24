@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TWO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="Two.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="Images\logo.png" alt="Logo" class="logo" /></a>
+        <div class="toggle" onclick="togglemenu()"></div>
+        <ul class="navigation">
+          <li class="navbar-text">Home</li>
+          <li class="navbar-text">About</li>
+          <li class="navbar-text">Services</li>
+          <li class="navbar-text">Contact</li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textbox">
+          <h2>Taste The Feeling Of Thunder !!</h2>
+          <p>
+            Coca-Cola is the world's most iconic beverage brand, known for its refreshing taste and uplifting fizz. With over a century of history, Coca-Cola has become a beloved household name across the globe. Whether you're at a party, a sporting event, or just relaxing at home, there's nothing quite like the crisp, refreshing taste of an ice-cold Coca-Cola. Our signature blend of secret ingredients, including natural flavors and caffeine, creates a one-of-a-kind taste experience that has been enjoyed by generations. So why not indulge in a refreshing Coca-Cola today and experience the magic for yourself?
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <!-- SWIPER -->
+        <div class="imgbox">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                 <div class="swiper-slide"><img src="Images\cocacola1.png" /></div>
+                 <div class="swiper-slide"><img src="Images\cocacola2.png" /></div>
+                 <div class="swiper-slide"><img src="Images\cocacola3.png" /></div>
+                 <div class="swiper-slide"><img src="Images\cocacola4.png" /></div>
+                 <div class="swiper-slide"><img src="Images\cocacola5.png" /></div>
+                 <div class="swiper-slide"><img src="Images\cocacola6.png" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="Images\facebook.png" alt="Facebook" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="Images\twitter.png" alt="Twitter" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="Images\instagram.png" alt="Instagram" /></a>
+        </li>
+      </ul>
+    </section>
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 500,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop:true,
+    });
+
+    function togglemenu(){
+      const menutoggle=document.querySelector('.toggle')
+      const navigation=document.querySelector('.navigation')
+      menutoggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+  </body>
+</html>
